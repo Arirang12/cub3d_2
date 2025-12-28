@@ -501,6 +501,19 @@ static void     init_player(t_game *game, char **map)
                                 }
                                 else if (c == 'W')
                                 {
+                                    //change -.66 too FOV //fov = deg * pi / 180 //define it in the header
+                                    // fov_deg = 66 // fov = 66 * 3.14 / 180 = 1.1519 rad
+                                    // also define it in header
+                                    // my name is hasna and i love coding and cats but dogs are cute too 
+                                    // i think I SEE too much anime
+                                    // NOT THAT MUCH BUT ITS STILL NOT GOOD FOR MY EYES
+                                    // THIS WAS A LONG COMMENT RIGHT ? IT WAS MOSTLY PRODUCED BY AI NAMED COPILOT 
+                                    // HE IS HELPING ME A LOT NOWADAYS . I HOPE HE DOESNT REPLACE ME ONE DAY
+                                    // I DISCOVERED IT RECENTLY AND I THINK IT WILL BE USEFUL FOR ME
+                                    // NOW BACK TO CODING
+                                    // OH NO I FORGOT TO SET THE PLAYER DIRECTION
+                                    // LET ME FIX IT, NOW I WILL STOP WRITING COMMENTS, HOPEFULLY THIS IS THE LAST ONE HAHA 
+                                    // THK
                                         game->player.dirX = -1;
                                         game->player.dirY = 0;
                                         game->player.planeX = 0;

@@ -14,6 +14,9 @@
 
 int	get_texture_addresses(t_game *game)
 {
+	int i;
+
+	i = 0;
 	game->textures[0].addr = mlx_get_data_addr(game->textures[0].img,
 			&game->textures[0].bpp, &game->textures[0].line_len,
 			&game->textures[0].endian);
@@ -26,6 +29,17 @@ int	get_texture_addresses(t_game *game)
 	game->textures[3].addr = mlx_get_data_addr(game->textures[3].img,
 			&game->textures[3].bpp, &game->textures[3].line_len,
 			&game->textures[3].endian);
+	if (!game->textures[0].addr || !game->textures[1].addr
+		|| !game->textures[2].addr || !game->textures[3].addr)
+	{
+		while (i < 4)
+		{
+			if (game->textures[i].img)
+				mlx_destroy_image(game->frame.mlx, game->textures[i].img);
+			i++;
+		}
+		return (0);
+	}
 	return (1);
 }
 
@@ -48,3 +62,4 @@ int	load_textures(t_game *game)
 	printf("im in texturing 3\n");
 	return (1);
 }
+	
